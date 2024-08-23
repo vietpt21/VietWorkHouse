@@ -1,0 +1,9 @@
+C:\Users\VIETPT\Desktop\VietWorkHouse\WorkHouse\WorkHouse.Repository\bin\Debug\WorkHouse.Repository.dll
+C:\Users\VIETPT\Desktop\VietWorkHouse\WorkHouse\WorkHouse.Repository\bin\Debug\WorkHouse.Repository.pdb
+C:\Users\VIETPT\Desktop\VietWorkHouse\WorkHouse\WorkHouse.Repository\bin\Debug\WorkHouse.Model.dll
+C:\Users\VIETPT\Desktop\VietWorkHouse\WorkHouse\WorkHouse.Repository\bin\Debug\WorkHouse.Model.pdb
+C:\Users\VIETPT\Desktop\VietWorkHouse\WorkHouse\WorkHouse.Repository\obj\Debug\WorkHouse.Repository.csproj.AssemblyReference.cache
+C:\Users\VIETPT\Desktop\VietWorkHouse\WorkHouse\WorkHouse.Repository\obj\Debug\WorkHouse.Repository.csproj.CoreCompileInputs.cache
+C:\Users\VIETPT\Desktop\VietWorkHouse\WorkHouse\WorkHouse.Repository\obj\Debug\WorkHous.F433B693.Up2Date
+C:\Users\VIETPT\Desktop\VietWorkHouse\WorkHouse\WorkHouse.Repository\obj\Debug\WorkHouse.Repository.dll
+C:\Users\VIETPT\Desktop\VietWorkHouse\WorkHouse\WorkHouse.Repository\obj\Debug\WorkHouse.Repository.pdb

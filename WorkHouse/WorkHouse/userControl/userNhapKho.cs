@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WorkHouse.userControl.formControl;
 
 namespace WorkHouse.userControl
 {
@@ -16,6 +17,12 @@ namespace WorkHouse.userControl
         public userNhapKho()
         {
             InitializeComponent();
+        }
+
+        private void btnNhapKho_Click(object sender, EventArgs e)
+        {
+            frmNhapKho frmNhapKho = new frmNhapKho();   
+            frmNhapKho.Show();
         }
     }
 }

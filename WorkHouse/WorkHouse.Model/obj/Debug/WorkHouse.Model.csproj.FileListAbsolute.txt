@@ -1,0 +1,6 @@
+C:\Users\VIETPT\Desktop\VietWorkHouse\WorkHouse\WorkHouse.Model\bin\Debug\WorkHouse.Model.dll
+C:\Users\VIETPT\Desktop\VietWorkHouse\WorkHouse\WorkHouse.Model\bin\Debug\WorkHouse.Model.pdb
+C:\Users\VIETPT\Desktop\VietWorkHouse\WorkHouse\WorkHouse.Model\obj\Debug\WorkHouse.Model.csproj.AssemblyReference.cache
+C:\Users\VIETPT\Desktop\VietWorkHouse\WorkHouse\WorkHouse.Model\obj\Debug\WorkHouse.Model.csproj.CoreCompileInputs.cache
+C:\Users\VIETPT\Desktop\VietWorkHouse\WorkHouse\WorkHouse.Model\obj\Debug\WorkHouse.Model.dll
+C:\Users\VIETPT\Desktop\VietWorkHouse\WorkHouse\WorkHouse.Model\obj\Debug\WorkHouse.Model.pdb
