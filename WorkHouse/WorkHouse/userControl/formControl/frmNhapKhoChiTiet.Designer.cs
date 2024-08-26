@@ -275,6 +275,7 @@
             this.txtSLNhap.Name = "txtSLNhap";
             this.txtSLNhap.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSLNhap.Properties.Appearance.Options.UseFont = true;
+            this.txtSLNhap.Properties.EditValueChanged += new System.EventHandler(this.txtSLNhap_Properties_EditValueChanged);
             this.txtSLNhap.Size = new System.Drawing.Size(234, 40);
             this.txtSLNhap.StyleController = this.layoutControl1;
             this.txtSLNhap.TabIndex = 19;
@@ -298,6 +299,7 @@
             this.txtSanPham.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtSanPham.Properties.NullText = "";
+            this.txtSanPham.Properties.EditValueChanged += new System.EventHandler(this.txtSanPham_Properties_EditValueChanged);
             this.txtSanPham.Size = new System.Drawing.Size(234, 40);
             this.txtSanPham.StyleController = this.layoutControl1;
             this.txtSanPham.TabIndex = 5;
@@ -704,6 +706,7 @@
             this.btnThemChiTiet.Size = new System.Drawing.Size(162, 36);
             this.btnThemChiTiet.TabIndex = 14;
             this.btnThemChiTiet.Text = "Thêm Sản Phẩm";
+            this.btnThemChiTiet.Click += new System.EventHandler(this.btnThemChiTiet_Click);
             // 
             // frmNhapKhoChiTiet
             // 
