@@ -20,3 +20,14 @@ C:\Users\VIETPT\Desktop\QLKho.WF\VietWorkHouse\WorkHouse\WorkHouse.Service\obj\D
 C:\Users\VIETPT\Desktop\QLKho.WF\VietWorkHouse\WorkHouse\WorkHouse.Service\obj\Debug\WorkHous.A174F80A.Up2Date
 C:\Users\VIETPT\Desktop\QLKho.WF\VietWorkHouse\WorkHouse\WorkHouse.Service\obj\Debug\WorkHouse.Service.dll
 C:\Users\VIETPT\Desktop\QLKho.WF\VietWorkHouse\WorkHouse\WorkHouse.Service\obj\Debug\WorkHouse.Service.pdb
+C:\Users\VIETPT\Desktop\New folder\VietWorkHouse\WorkHouse\WorkHouse.Service\bin\Debug\WorkHouse.Service.dll
+C:\Users\VIETPT\Desktop\New folder\VietWorkHouse\WorkHouse\WorkHouse.Service\bin\Debug\WorkHouse.Service.pdb
+C:\Users\VIETPT\Desktop\New folder\VietWorkHouse\WorkHouse\WorkHouse.Service\bin\Debug\WorkHouse.Model.dll
+C:\Users\VIETPT\Desktop\New folder\VietWorkHouse\WorkHouse\WorkHouse.Service\bin\Debug\WorkHouse.Repository.dll
+C:\Users\VIETPT\Desktop\New folder\VietWorkHouse\WorkHouse\WorkHouse.Service\bin\Debug\WorkHouse.Model.pdb
+C:\Users\VIETPT\Desktop\New folder\VietWorkHouse\WorkHouse\WorkHouse.Service\bin\Debug\WorkHouse.Repository.pdb
+C:\Users\VIETPT\Desktop\New folder\VietWorkHouse\WorkHouse\WorkHouse.Service\obj\Debug\WorkHouse.Service.csproj.AssemblyReference.cache
+C:\Users\VIETPT\Desktop\New folder\VietWorkHouse\WorkHouse\WorkHouse.Service\obj\Debug\WorkHouse.Service.csproj.CoreCompileInputs.cache
+C:\Users\VIETPT\Desktop\New folder\VietWorkHouse\WorkHouse\WorkHouse.Service\obj\Debug\WorkHous.A174F80A.Up2Date
+C:\Users\VIETPT\Desktop\New folder\VietWorkHouse\WorkHouse\WorkHouse.Service\obj\Debug\WorkHouse.Service.dll
+C:\Users\VIETPT\Desktop\New folder\VietWorkHouse\WorkHouse\WorkHouse.Service\obj\Debug\WorkHouse.Service.pdb

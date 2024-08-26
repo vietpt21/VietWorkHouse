@@ -1,49 +1,49 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\VIETPT\\Desktop\\QLKho.WF\\VietWorkHouse\\WorkHouse\\",
+  "WorkspaceRootPath": "C:\\Users\\VIETPT\\Desktop\\New folder\\VietWorkHouse\\WorkHouse\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{73C78E02-2705-4064-AE96-D3C6C0498B59}|WorkHouse.Repository\\WorkHouse.Repository.csproj|c:\\users\\vietpt\\desktop\\qlkho.wf\\vietworkhouse\\workhouse\\workhouse.repository\\nhapkhoreponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{73C78E02-2705-4064-AE96-D3C6C0498B59}|WorkHouse.Repository\\WorkHouse.Repository.csproj|c:\\users\\vietpt\\desktop\\new folder\\vietworkhouse\\workhouse\\workhouse.repository\\nhapkhoreponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{73C78E02-2705-4064-AE96-D3C6C0498B59}|WorkHouse.Repository\\WorkHouse.Repository.csproj|solutionrelative:workhouse.repository\\nhapkhoreponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8BAFBC33-CA95-4463-A84C-4A2F73638751}|WorkHouse\\WorkHouse.csproj|c:\\users\\vietpt\\desktop\\qlkho.wf\\vietworkhouse\\workhouse\\workhouse\\usercontrol\\usernhapkho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8BAFBC33-CA95-4463-A84C-4A2F73638751}|WorkHouse\\WorkHouse.csproj|solutionrelative:workhouse\\usercontrol\\usernhapkho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8BAFBC33-CA95-4463-A84C-4A2F73638751}|WorkHouse\\WorkHouse.csproj|c:\\users\\vietpt\\desktop\\qlkho.wf\\vietworkhouse\\workhouse\\workhouse\\usercontrol\\usernhapkho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8BAFBC33-CA95-4463-A84C-4A2F73638751}|WorkHouse\\WorkHouse.csproj|solutionrelative:workhouse\\usercontrol\\usernhapkho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8BAFBC33-CA95-4463-A84C-4A2F73638751}|WorkHouse\\WorkHouse.csproj|C:\\Users\\VIETPT\\Desktop\\QLKho.WF\\VietWorkHouse\\WorkHouse\\workhouse\\usercontrol\\formcontrol\\frmnhapkho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8BAFBC33-CA95-4463-A84C-4A2F73638751}|WorkHouse\\WorkHouse.csproj|C:\\Users\\VIETPT\\Desktop\\New folder\\VietWorkHouse\\WorkHouse\\workhouse\\usercontrol\\formcontrol\\frmnhapkho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8BAFBC33-CA95-4463-A84C-4A2F73638751}|WorkHouse\\WorkHouse.csproj|solutionrelative:workhouse\\usercontrol\\formcontrol\\frmnhapkho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8BAFBC33-CA95-4463-A84C-4A2F73638751}|WorkHouse\\WorkHouse.csproj|c:\\users\\vietpt\\desktop\\qlkho.wf\\vietworkhouse\\workhouse\\workhouse\\usercontrol\\formcontrol\\frmnhapkhochitiet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8BAFBC33-CA95-4463-A84C-4A2F73638751}|WorkHouse\\WorkHouse.csproj|solutionrelative:workhouse\\usercontrol\\formcontrol\\frmnhapkhochitiet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8BAFBC33-CA95-4463-A84C-4A2F73638751}|WorkHouse\\WorkHouse.csproj|c:\\users\\vietpt\\desktop\\qlkho.wf\\vietworkhouse\\workhouse\\workhouse\\usercontrol\\formcontrol\\frmnhapkhochitiet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8BAFBC33-CA95-4463-A84C-4A2F73638751}|WorkHouse\\WorkHouse.csproj|solutionrelative:workhouse\\usercontrol\\formcontrol\\frmnhapkhochitiet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8BAFBC33-CA95-4463-A84C-4A2F73638751}|WorkHouse\\WorkHouse.csproj|c:\\users\\vietpt\\desktop\\qlkho.wf\\vietworkhouse\\workhouse\\workhouse\\usercontrol\\formcontrol\\frmnhapkhochitiet.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8BAFBC33-CA95-4463-A84C-4A2F73638751}|WorkHouse\\WorkHouse.csproj|solutionrelative:workhouse\\usercontrol\\formcontrol\\frmnhapkhochitiet.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8BAFBC33-CA95-4463-A84C-4A2F73638751}|WorkHouse\\WorkHouse.csproj|C:\\Users\\VIETPT\\Desktop\\QLKho.WF\\VietWorkHouse\\WorkHouse\\workhouse\\usercontrol\\formcontrol\\frmnhapkho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8BAFBC33-CA95-4463-A84C-4A2F73638751}|WorkHouse\\WorkHouse.csproj|solutionrelative:workhouse\\usercontrol\\formcontrol\\frmnhapkho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8BAFBC33-CA95-4463-A84C-4A2F73638751}|WorkHouse\\WorkHouse.csproj|C:\\Users\\VIETPT\\Desktop\\QLKho.WF\\VietWorkHouse\\WorkHouse\\workhouse\\usercontrol\\formcontrol\\frmnhapkho.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8BAFBC33-CA95-4463-A84C-4A2F73638751}|WorkHouse\\WorkHouse.csproj|solutionrelative:workhouse\\usercontrol\\formcontrol\\frmnhapkho.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F5FED0F-5652-4A64-B824-35BF734D15EC}|WorkHouse.Model\\WorkHouse.Model.csproj|c:\\users\\vietpt\\desktop\\qlkho.wf\\vietworkhouse\\workhouse\\workhouse.model\\nhapkho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1F5FED0F-5652-4A64-B824-35BF734D15EC}|WorkHouse.Model\\WorkHouse.Model.csproj|C:\\Users\\VIETPT\\Desktop\\New folder\\VietWorkHouse\\WorkHouse\\workhouse.model\\nhapkho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1F5FED0F-5652-4A64-B824-35BF734D15EC}|WorkHouse.Model\\WorkHouse.Model.csproj|solutionrelative:workhouse.model\\nhapkho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C6242F45-1B39-4256-925A-914CAC08F25E}|WorkHouse.Service\\WorkHouse.Service.csproj|c:\\users\\vietpt\\desktop\\qlkho.wf\\vietworkhouse\\workhouse\\workhouse.service\\unitservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8BAFBC33-CA95-4463-A84C-4A2F73638751}|WorkHouse\\WorkHouse.csproj|C:\\Users\\VIETPT\\Desktop\\New folder\\VietWorkHouse\\WorkHouse\\workhouse\\usercontrol\\formcontrol\\frmnhapkho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8BAFBC33-CA95-4463-A84C-4A2F73638751}|WorkHouse\\WorkHouse.csproj|solutionrelative:workhouse\\usercontrol\\formcontrol\\frmnhapkho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BAFBC33-CA95-4463-A84C-4A2F73638751}|WorkHouse\\WorkHouse.csproj|C:\\Users\\VIETPT\\Desktop\\New folder\\VietWorkHouse\\WorkHouse\\workhouse\\usercontrol\\formcontrol\\frmnhapkhochitiet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BAFBC33-CA95-4463-A84C-4A2F73638751}|WorkHouse\\WorkHouse.csproj|solutionrelative:workhouse\\usercontrol\\formcontrol\\frmnhapkhochitiet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BAFBC33-CA95-4463-A84C-4A2F73638751}|WorkHouse\\WorkHouse.csproj|C:\\Users\\VIETPT\\Desktop\\New folder\\VietWorkHouse\\WorkHouse\\workhouse\\usercontrol\\usernhapkho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8BAFBC33-CA95-4463-A84C-4A2F73638751}|WorkHouse\\WorkHouse.csproj|solutionrelative:workhouse\\usercontrol\\usernhapkho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BAFBC33-CA95-4463-A84C-4A2F73638751}|WorkHouse\\WorkHouse.csproj|C:\\Users\\VIETPT\\Desktop\\New folder\\VietWorkHouse\\WorkHouse\\workhouse\\usercontrol\\formcontrol\\frmnhapkhochitiet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8BAFBC33-CA95-4463-A84C-4A2F73638751}|WorkHouse\\WorkHouse.csproj|solutionrelative:workhouse\\usercontrol\\formcontrol\\frmnhapkhochitiet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BAFBC33-CA95-4463-A84C-4A2F73638751}|WorkHouse\\WorkHouse.csproj|C:\\Users\\VIETPT\\Desktop\\New folder\\VietWorkHouse\\WorkHouse\\workhouse\\usercontrol\\usernhapkho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BAFBC33-CA95-4463-A84C-4A2F73638751}|WorkHouse\\WorkHouse.csproj|solutionrelative:workhouse\\usercontrol\\usernhapkho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BAFBC33-CA95-4463-A84C-4A2F73638751}|WorkHouse\\WorkHouse.csproj|C:\\Users\\VIETPT\\Desktop\\New folder\\VietWorkHouse\\WorkHouse\\workhouse\\usercontrol\\formcontrol\\frmnhapkhochitiet.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BAFBC33-CA95-4463-A84C-4A2F73638751}|WorkHouse\\WorkHouse.csproj|solutionrelative:workhouse\\usercontrol\\formcontrol\\frmnhapkhochitiet.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BAFBC33-CA95-4463-A84C-4A2F73638751}|WorkHouse\\WorkHouse.csproj|C:\\Users\\VIETPT\\Desktop\\New folder\\VietWorkHouse\\WorkHouse\\workhouse\\usercontrol\\formcontrol\\frmnhapkho.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BAFBC33-CA95-4463-A84C-4A2F73638751}|WorkHouse\\WorkHouse.csproj|solutionrelative:workhouse\\usercontrol\\formcontrol\\frmnhapkho.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6242F45-1B39-4256-925A-914CAC08F25E}|WorkHouse.Service\\WorkHouse.Service.csproj|C:\\Users\\VIETPT\\Desktop\\New folder\\VietWorkHouse\\WorkHouse\\workhouse.service\\unitservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C6242F45-1B39-4256-925A-914CAC08F25E}|WorkHouse.Service\\WorkHouse.Service.csproj|solutionrelative:workhouse.service\\unitservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -54,41 +54,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "NhapKhoReponse.cs",
-              "DocumentMoniker": "C:\\Users\\VIETPT\\Desktop\\QLKho.WF\\VietWorkHouse\\WorkHouse\\WorkHouse.Repository\\NhapKhoReponse.cs",
-              "RelativeDocumentMoniker": "WorkHouse.Repository\\NhapKhoReponse.cs",
-              "ToolTip": "C:\\Users\\VIETPT\\Desktop\\QLKho.WF\\VietWorkHouse\\WorkHouse\\WorkHouse.Repository\\NhapKhoReponse.cs",
-              "RelativeToolTip": "WorkHouse.Repository\\NhapKhoReponse.cs",
-              "ViewState": "AQIAAKAAAAAAAAAAAAAgwMQAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-26T02:43:22.598Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "userNhapKho.cs",
-              "DocumentMoniker": "C:\\Users\\VIETPT\\Desktop\\QLKho.WF\\VietWorkHouse\\WorkHouse\\WorkHouse\\userControl\\userNhapKho.cs",
-              "RelativeDocumentMoniker": "WorkHouse\\userControl\\userNhapKho.cs",
-              "ToolTip": "C:\\Users\\VIETPT\\Desktop\\QLKho.WF\\VietWorkHouse\\WorkHouse\\WorkHouse\\userControl\\userNhapKho.cs",
-              "RelativeToolTip": "WorkHouse\\userControl\\userNhapKho.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAQwB0AAAA1AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-26T02:41:31.561Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "userNhapKho.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\VIETPT\\Desktop\\QLKho.WF\\VietWorkHouse\\WorkHouse\\WorkHouse\\userControl\\userNhapKho.cs",
+              "DocumentMoniker": "C:\\Users\\VIETPT\\Desktop\\New folder\\VietWorkHouse\\WorkHouse\\WorkHouse\\userControl\\userNhapKho.cs",
               "RelativeDocumentMoniker": "WorkHouse\\userControl\\userNhapKho.cs",
-              "ToolTip": "C:\\Users\\VIETPT\\Desktop\\QLKho.WF\\VietWorkHouse\\WorkHouse\\WorkHouse\\userControl\\userNhapKho.cs [Design]",
+              "ToolTip": "C:\\Users\\VIETPT\\Desktop\\New folder\\VietWorkHouse\\WorkHouse\\WorkHouse\\userControl\\userNhapKho.cs [Design]",
               "RelativeToolTip": "WorkHouse\\userControl\\userNhapKho.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-26T02:41:29.786Z",
@@ -96,24 +70,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "frmNhapKhoChiTiet.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\VIETPT\\Desktop\\QLKho.WF\\VietWorkHouse\\WorkHouse\\WorkHouse\\userControl\\formControl\\frmNhapKhoChiTiet.Designer.cs",
-              "RelativeDocumentMoniker": "WorkHouse\\userControl\\formControl\\frmNhapKhoChiTiet.Designer.cs",
-              "ToolTip": "C:\\Users\\VIETPT\\Desktop\\QLKho.WF\\VietWorkHouse\\WorkHouse\\WorkHouse\\userControl\\formControl\\frmNhapKhoChiTiet.Designer.cs",
-              "RelativeToolTip": "WorkHouse\\userControl\\formControl\\frmNhapKhoChiTiet.Designer.cs",
-              "ViewState": "AQIAAJYAAAAAAAAAAAAQwKEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-26T02:25:19.773Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "frmNhapKhoChiTiet.cs",
-              "DocumentMoniker": "C:\\Users\\VIETPT\\Desktop\\QLKho.WF\\VietWorkHouse\\WorkHouse\\WorkHouse\\userControl\\formControl\\frmNhapKhoChiTiet.cs",
+              "DocumentMoniker": "C:\\Users\\VIETPT\\Desktop\\New folder\\VietWorkHouse\\WorkHouse\\WorkHouse\\userControl\\formControl\\frmNhapKhoChiTiet.cs",
               "RelativeDocumentMoniker": "WorkHouse\\userControl\\formControl\\frmNhapKhoChiTiet.cs",
-              "ToolTip": "C:\\Users\\VIETPT\\Desktop\\QLKho.WF\\VietWorkHouse\\WorkHouse\\WorkHouse\\userControl\\formControl\\frmNhapKhoChiTiet.cs",
+              "ToolTip": "C:\\Users\\VIETPT\\Desktop\\New folder\\VietWorkHouse\\WorkHouse\\WorkHouse\\userControl\\formControl\\frmNhapKhoChiTiet.cs",
               "RelativeToolTip": "WorkHouse\\userControl\\formControl\\frmNhapKhoChiTiet.cs",
               "ViewState": "AQIAAAUAAAAAAAAAAAAqwBQAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -122,11 +83,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "frmNhapKhoChiTiet.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\VIETPT\\Desktop\\QLKho.WF\\VietWorkHouse\\WorkHouse\\WorkHouse\\userControl\\formControl\\frmNhapKhoChiTiet.cs",
+              "DocumentMoniker": "C:\\Users\\VIETPT\\Desktop\\New folder\\VietWorkHouse\\WorkHouse\\WorkHouse\\userControl\\formControl\\frmNhapKhoChiTiet.cs",
               "RelativeDocumentMoniker": "WorkHouse\\userControl\\formControl\\frmNhapKhoChiTiet.cs",
-              "ToolTip": "C:\\Users\\VIETPT\\Desktop\\QLKho.WF\\VietWorkHouse\\WorkHouse\\WorkHouse\\userControl\\formControl\\frmNhapKhoChiTiet.cs [Design]",
+              "ToolTip": "C:\\Users\\VIETPT\\Desktop\\New folder\\VietWorkHouse\\WorkHouse\\WorkHouse\\userControl\\formControl\\frmNhapKhoChiTiet.cs [Design]",
               "RelativeToolTip": "WorkHouse\\userControl\\formControl\\frmNhapKhoChiTiet.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-26T01:54:29.668Z",
@@ -134,24 +95,88 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 3,
+              "Title": "frmNhapKho.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\VIETPT\\Desktop\\New folder\\VietWorkHouse\\WorkHouse\\WorkHouse\\userControl\\formControl\\frmNhapKho.cs",
+              "RelativeDocumentMoniker": "WorkHouse\\userControl\\formControl\\frmNhapKho.cs",
+              "ToolTip": "C:\\Users\\VIETPT\\Desktop\\New folder\\VietWorkHouse\\WorkHouse\\WorkHouse\\userControl\\formControl\\frmNhapKho.cs [Design]",
+              "RelativeToolTip": "WorkHouse\\userControl\\formControl\\frmNhapKho.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-22T08:23:37.964Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmNhapKho.cs",
+              "DocumentMoniker": "C:\\Users\\VIETPT\\Desktop\\New folder\\VietWorkHouse\\WorkHouse\\WorkHouse\\userControl\\formControl\\frmNhapKho.cs",
+              "RelativeDocumentMoniker": "WorkHouse\\userControl\\formControl\\frmNhapKho.cs",
+              "ToolTip": "C:\\Users\\VIETPT\\Desktop\\New folder\\VietWorkHouse\\WorkHouse\\WorkHouse\\userControl\\formControl\\frmNhapKho.cs",
+              "RelativeToolTip": "WorkHouse\\userControl\\formControl\\frmNhapKho.cs",
+              "ViewState": "AQIAALAAAAAAAAAAAAAAwLsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-23T01:14:55.06Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "NhapKho.cs",
-              "DocumentMoniker": "C:\\Users\\VIETPT\\Desktop\\QLKho.WF\\VietWorkHouse\\WorkHouse\\WorkHouse.Model\\NhapKho.cs",
+              "DocumentMoniker": "C:\\Users\\VIETPT\\Desktop\\New folder\\VietWorkHouse\\WorkHouse\\WorkHouse.Model\\NhapKho.cs",
               "RelativeDocumentMoniker": "WorkHouse.Model\\NhapKho.cs",
-              "ToolTip": "C:\\Users\\VIETPT\\Desktop\\QLKho.WF\\VietWorkHouse\\WorkHouse\\WorkHouse.Model\\NhapKho.cs",
+              "ToolTip": "C:\\Users\\VIETPT\\Desktop\\New folder\\VietWorkHouse\\WorkHouse\\WorkHouse.Model\\NhapKho.cs",
               "RelativeToolTip": "WorkHouse.Model\\NhapKho.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAVAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-26T01:47:40.724Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NhapKhoReponse.cs",
+              "DocumentMoniker": "C:\\Users\\VIETPT\\Desktop\\New folder\\VietWorkHouse\\WorkHouse\\WorkHouse.Repository\\NhapKhoReponse.cs",
+              "RelativeDocumentMoniker": "WorkHouse.Repository\\NhapKhoReponse.cs",
+              "ToolTip": "C:\\Users\\VIETPT\\Desktop\\New folder\\VietWorkHouse\\WorkHouse\\WorkHouse.Repository\\NhapKhoReponse.cs",
+              "RelativeToolTip": "WorkHouse.Repository\\NhapKhoReponse.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAADwv8kAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-26T02:43:22.598Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "frmNhapKhoChiTiet.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\VIETPT\\Desktop\\New folder\\VietWorkHouse\\WorkHouse\\WorkHouse\\userControl\\formControl\\frmNhapKhoChiTiet.Designer.cs",
+              "RelativeDocumentMoniker": "WorkHouse\\userControl\\formControl\\frmNhapKhoChiTiet.Designer.cs",
+              "ToolTip": "C:\\Users\\VIETPT\\Desktop\\New folder\\VietWorkHouse\\WorkHouse\\WorkHouse\\userControl\\formControl\\frmNhapKhoChiTiet.Designer.cs",
+              "RelativeToolTip": "WorkHouse\\userControl\\formControl\\frmNhapKhoChiTiet.Designer.cs",
+              "ViewState": "AQIAAJYAAAAAAAAAAAAQwKEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-26T02:25:19.773Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "userNhapKho.cs",
+              "DocumentMoniker": "C:\\Users\\VIETPT\\Desktop\\New folder\\VietWorkHouse\\WorkHouse\\WorkHouse\\userControl\\userNhapKho.cs",
+              "RelativeDocumentMoniker": "WorkHouse\\userControl\\userNhapKho.cs",
+              "ToolTip": "C:\\Users\\VIETPT\\Desktop\\New folder\\VietWorkHouse\\WorkHouse\\WorkHouse\\userControl\\userNhapKho.cs",
+              "RelativeToolTip": "WorkHouse\\userControl\\userNhapKho.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAQwB0AAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-26T02:41:31.561Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "frmNhapKho.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\VIETPT\\Desktop\\QLKho.WF\\VietWorkHouse\\WorkHouse\\WorkHouse\\userControl\\formControl\\frmNhapKho.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\VIETPT\\Desktop\\New folder\\VietWorkHouse\\WorkHouse\\WorkHouse\\userControl\\formControl\\frmNhapKho.Designer.cs",
               "RelativeDocumentMoniker": "WorkHouse\\userControl\\formControl\\frmNhapKho.Designer.cs",
-              "ToolTip": "C:\\Users\\VIETPT\\Desktop\\QLKho.WF\\VietWorkHouse\\WorkHouse\\WorkHouse\\userControl\\formControl\\frmNhapKho.Designer.cs",
+              "ToolTip": "C:\\Users\\VIETPT\\Desktop\\New folder\\VietWorkHouse\\WorkHouse\\WorkHouse\\userControl\\formControl\\frmNhapKho.Designer.cs",
               "RelativeToolTip": "WorkHouse\\userControl\\formControl\\frmNhapKho.Designer.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -160,36 +185,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "frmNhapKho.cs",
-              "DocumentMoniker": "C:\\Users\\VIETPT\\Desktop\\QLKho.WF\\VietWorkHouse\\WorkHouse\\WorkHouse\\userControl\\formControl\\frmNhapKho.cs",
-              "RelativeDocumentMoniker": "WorkHouse\\userControl\\formControl\\frmNhapKho.cs",
-              "ToolTip": "C:\\Users\\VIETPT\\Desktop\\QLKho.WF\\VietWorkHouse\\WorkHouse\\WorkHouse\\userControl\\formControl\\frmNhapKho.cs",
-              "RelativeToolTip": "WorkHouse\\userControl\\formControl\\frmNhapKho.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAA6wEYAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-23T01:14:55.06Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "frmNhapKho.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\VIETPT\\Desktop\\QLKho.WF\\VietWorkHouse\\WorkHouse\\WorkHouse\\userControl\\formControl\\frmNhapKho.cs",
-              "RelativeDocumentMoniker": "WorkHouse\\userControl\\formControl\\frmNhapKho.cs",
-              "ToolTip": "C:\\Users\\VIETPT\\Desktop\\QLKho.WF\\VietWorkHouse\\WorkHouse\\WorkHouse\\userControl\\formControl\\frmNhapKho.cs [Design]",
-              "RelativeToolTip": "WorkHouse\\userControl\\formControl\\frmNhapKho.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-22T08:23:37.964Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 10,
               "Title": "UnitService.cs",
-              "DocumentMoniker": "C:\\Users\\VIETPT\\Desktop\\QLKho.WF\\VietWorkHouse\\WorkHouse\\WorkHouse.Service\\UnitService.cs",
+              "DocumentMoniker": "C:\\Users\\VIETPT\\Desktop\\New folder\\VietWorkHouse\\WorkHouse\\WorkHouse.Service\\UnitService.cs",
               "RelativeDocumentMoniker": "WorkHouse.Service\\UnitService.cs",
-              "ToolTip": "C:\\Users\\VIETPT\\Desktop\\QLKho.WF\\VietWorkHouse\\WorkHouse\\WorkHouse.Service\\UnitService.cs",
+              "ToolTip": "C:\\Users\\VIETPT\\Desktop\\New folder\\VietWorkHouse\\WorkHouse\\WorkHouse.Service\\UnitService.cs",
               "RelativeToolTip": "WorkHouse.Service\\UnitService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

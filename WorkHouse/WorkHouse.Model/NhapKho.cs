@@ -18,8 +18,8 @@ namespace WorkHouse.Model
         public int SlNhap { get; set; }
         public string NguoiGiao { get; set; }
         public string NoiDungNhap { get; set; }
-        public DateTime? NgayTao { get; set; }
-        public DateTime? NgayCapNhat { get; set; }
+        public DateTime NgayTao { get; set; }
+        public DateTime NgayCapNhat { get; set; }
         public string NguoiTao { get; set; }
     }
 

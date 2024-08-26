@@ -51,8 +51,8 @@ namespace WorkHouse.Repository
                                     SlNhap = Convert.ToInt32(reader["sl_nhap"]),
                                     NguoiGiao = reader["nguoi_giao"].ToString(),
                                     NoiDungNhap = reader["noi_dung_nhap"].ToString(),
-                                    NgayTao = reader["ngay_tao"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(reader["ngay_tao"]),
-                                    NgayCapNhat = reader["ngay_cap_nhat"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(reader["ngay_cap_nhat"]),
+                                    NgayTao = Convert.ToDateTime(reader["ngay_tao"]),
+                                    NgayCapNhat = Convert.ToDateTime(reader["ngay_cap_nhap"]),
                                     NguoiTao = reader["nguoi_tao"].ToString(),
                                     ncc = new NCC
                                     {
@@ -116,8 +116,8 @@ namespace WorkHouse.Repository
                     command.Parameters.AddWithValue("@SlNhap", nhapKho.SlNhap);
                     command.Parameters.AddWithValue("@NguoiGiao", nhapKho.NguoiGiao ?? (object)DBNull.Value);
                     command.Parameters.AddWithValue("@NoiDungNhap", nhapKho.NoiDungNhap ?? (object)DBNull.Value);
-                    command.Parameters.AddWithValue("@NgayTao", nhapKho.NgayTao.HasValue ? (object)nhapKho.NgayTao.Value : DBNull.Value);
-                    command.Parameters.AddWithValue("@NgayCapNhat", nhapKho.NgayCapNhat.HasValue ? (object)nhapKho.NgayCapNhat.Value : DBNull.Value);
+                    command.Parameters.AddWithValue("@NgayTao", nhapKho.NgayTao);
+                    command.Parameters.AddWithValue("@NgayCapNhat", nhapKho.NgayCapNhat);
                     command.Parameters.AddWithValue("@NguoiTao", nhapKho.NguoiTao ?? (object)DBNull.Value);
 
                     try
@@ -153,8 +153,8 @@ namespace WorkHouse.Repository
                     command.Parameters.AddWithValue("@SlNhap", nhapKho.SlNhap);
                     command.Parameters.AddWithValue("@NguoiGiao", nhapKho.NguoiGiao ?? (object)DBNull.Value);
                     command.Parameters.AddWithValue("@NoiDungNhap", nhapKho.NoiDungNhap ?? (object)DBNull.Value);
-                    command.Parameters.AddWithValue("@NgayTao", nhapKho.NgayTao.HasValue ? (object)nhapKho.NgayTao.Value : DBNull.Value);
-                    command.Parameters.AddWithValue("@NgayCapNhat", nhapKho.NgayCapNhat.HasValue ? (object)nhapKho.NgayCapNhat.Value : DBNull.Value);
+                    command.Parameters.AddWithValue("@NgayTao", nhapKho.NgayTao);
+                    command.Parameters.AddWithValue("@NgayCapNhat", nhapKho.NgayCapNhat);
                     command.Parameters.AddWithValue("@NguoiTao", nhapKho.NguoiTao ?? (object)DBNull.Value);
 
                     try
@@ -195,6 +195,7 @@ namespace WorkHouse.Repository
                 }
             }
         }
+
     }
 
 }
