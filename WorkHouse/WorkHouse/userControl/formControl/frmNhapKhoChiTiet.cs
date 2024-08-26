@@ -17,5 +17,7 @@ namespace WorkHouse.userControl.formControl
         {
             InitializeComponent();
         }
+
+        
     }
 }

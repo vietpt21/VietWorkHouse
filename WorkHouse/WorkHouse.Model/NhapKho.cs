@@ -8,7 +8,7 @@ namespace WorkHouse.Model
 {
     public class NhapKho
     {
-        public int Id { get; set; }
+        public string Id { get; set; }
         public string LoaiNhap { get; set; }
         public DateTime NgayNhap { get; set; }
         public int NccId { get; set; }

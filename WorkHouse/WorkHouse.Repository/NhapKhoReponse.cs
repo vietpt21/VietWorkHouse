@@ -43,7 +43,7 @@ namespace WorkHouse.Repository
                             {
                                 NhapKho nhapKho = new NhapKho
                                 {
-                                    Id = Convert.ToInt32(reader["id"]),
+                                    Id = reader["id"].ToString(),
                                     LoaiNhap = reader["loai_nhap"].ToString(),
                                     NgayNhap = Convert.ToDateTime(reader["ngay_nhap"]),
                                     NccId = Convert.ToInt32(reader["ncc_id"]),
@@ -100,12 +100,15 @@ namespace WorkHouse.Repository
         {
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
+                // Chuẩn bị câu lệnh SQL để chèn bản ghi mới vào bảng nhap_kho
                 string sql = @"
-            INSERT INTO nhap_kho (loai_nhap, ngay_nhap, ncc_id, kho_id, sl_nhap, nguoi_giao, noi_dung_nhap, ngay_tao, ngay_cap_nhat, nguoi_tao)
-            VALUES (@LoaiNhap, @NgayNhap, @NccId, @KhoId, @SlNhap, @NguoiGiao, @NoiDungNhap, @NgayTao, @NgayCapNhat, @NguoiTao)";
+        INSERT INTO nhap_kho (id, loai_nhap, ngay_nhap, ncc_id, kho_id, sl_nhap, nguoi_giao, noi_dung_nhap, ngay_tao, ngay_cap_nhat, nguoi_tao)
+        VALUES (@Id, @LoaiNhap, @NgayNhap, @NccId, @KhoId, @SlNhap, @NguoiGiao, @NoiDungNhap, @NgayTao, @NgayCapNhat, @NguoiTao)";
 
                 using (SqlCommand command = new SqlCommand(sql, connection))
                 {
+                    // Thêm các tham số vào câu lệnh SQL
+                    command.Parameters.AddWithValue("@Id", nhapKho.Id); // Thêm ID vào tham số
                     command.Parameters.AddWithValue("@LoaiNhap", nhapKho.LoaiNhap ?? (object)DBNull.Value);
                     command.Parameters.AddWithValue("@NgayNhap", nhapKho.NgayNhap);
                     command.Parameters.AddWithValue("@NccId", nhapKho.NccId);
@@ -125,13 +128,14 @@ namespace WorkHouse.Repository
                     }
                     catch (SqlException ex)
                     {
-                        Console.WriteLine($"Error updating NCC record: {ex.Message}");
+                        Console.WriteLine($"Error inserting NhapKho record: {ex.Message}");
                         // Xử lý lỗi theo nhu cầu
                         return false; // Thất bại
                     }
                 }
             }
         }
+
         public bool UpdtaeNhapKho(NhapKho nhapKho)
         {
             using (SqlConnection connection = new SqlConnection(_connectionString))
@@ -140,6 +144,7 @@ namespace WorkHouse.Repository
 
                 using (SqlCommand command = new SqlCommand(sql, connection))
                 {
+
                     command.Parameters.AddWithValue("@Id", nhapKho.Id);
                     command.Parameters.AddWithValue("@LoaiNhap", nhapKho.LoaiNhap ?? (object)DBNull.Value);
                     command.Parameters.AddWithValue("@NgayNhap", nhapKho.NgayNhap);
@@ -190,7 +195,6 @@ namespace WorkHouse.Repository
                 }
             }
         }
-
     }
 
 }
