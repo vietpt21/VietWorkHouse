@@ -345,6 +345,10 @@
             this.cboNhomSanPham.Properties.Appearance.Options.UseFont = true;
             this.cboNhomSanPham.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cboNhomSanPham.Properties.Items.AddRange(new object[] {
+            "Nhóm sản phẩm loại 1",
+            "Nhóm sản phẩm loại 2",
+            "Nhóm sản phẩm loại 3"});
             this.cboNhomSanPham.Size = new System.Drawing.Size(245, 40);
             this.cboNhomSanPham.StyleController = this.layoutControl1;
             this.cboNhomSanPham.TabIndex = 10;
@@ -701,7 +705,7 @@
             // btnThemChiTiet
             // 
             this.btnThemChiTiet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThemChiTiet.ImageOptions.Image")));
-            this.btnThemChiTiet.Location = new System.Drawing.Point(846, 20);
+            this.btnThemChiTiet.Location = new System.Drawing.Point(819, 17);
             this.btnThemChiTiet.Name = "btnThemChiTiet";
             this.btnThemChiTiet.Size = new System.Drawing.Size(162, 36);
             this.btnThemChiTiet.TabIndex = 14;
@@ -718,6 +722,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "frmNhapKhoChiTiet";
             this.Text = "frmNhapKhoChiTiet";
+            this.Load += new System.EventHandler(this.frmNhapKhoChiTiet_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();

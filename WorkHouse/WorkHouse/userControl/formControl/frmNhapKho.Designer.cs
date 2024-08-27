@@ -47,7 +47,6 @@
             this.txtNCC = new DevExpress.XtraEditors.LookUpEdit();
             this.txtKho = new DevExpress.XtraEditors.LookUpEdit();
             this.txtSoLuongNhap = new DevExpress.XtraEditors.TextEdit();
-            this.txtNguoiGiao = new DevExpress.XtraEditors.TextEdit();
             this.txtNgayTao = new DevExpress.XtraEditors.DateEdit();
             this.txtNgayCapNhat = new DevExpress.XtraEditors.DateEdit();
             this.txtNgayNhap = new DevExpress.XtraEditors.DateEdit();
@@ -90,6 +89,7 @@
             this.gridColumn41 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn42 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn43 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.txtNguoiGiao = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.mainRibbonControl)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
@@ -100,7 +100,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtNCC.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKho.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSoLuongNhap.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNguoiGiao.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNgayTao.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNgayTao.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNgayCapNhat.Properties.CalendarTimeProperties)).BeginInit();
@@ -131,6 +130,7 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridDataNhapKho)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewNhapKho)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNguoiGiao.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // mainRibbonPage
@@ -237,10 +237,10 @@
             this.layoutControl2.Controls.Add(this.txtNCC);
             this.layoutControl2.Controls.Add(this.txtKho);
             this.layoutControl2.Controls.Add(this.txtSoLuongNhap);
-            this.layoutControl2.Controls.Add(this.txtNguoiGiao);
             this.layoutControl2.Controls.Add(this.txtNgayTao);
             this.layoutControl2.Controls.Add(this.txtNgayCapNhat);
             this.layoutControl2.Controls.Add(this.txtNgayNhap);
+            this.layoutControl2.Controls.Add(this.txtNguoiGiao);
             this.layoutControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl2.Location = new System.Drawing.Point(224, 0);
             this.layoutControl2.Name = "layoutControl2";
@@ -333,20 +333,6 @@
             this.txtSoLuongNhap.Size = new System.Drawing.Size(305, 38);
             this.txtSoLuongNhap.StyleController = this.layoutControl2;
             this.txtSoLuongNhap.TabIndex = 15;
-            // 
-            // txtNguoiGiao
-            // 
-            this.txtNguoiGiao.Location = new System.Drawing.Point(507, 182);
-            this.txtNguoiGiao.Name = "txtNguoiGiao";
-            this.txtNguoiGiao.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNguoiGiao.Properties.Appearance.Options.UseFont = true;
-            this.txtNguoiGiao.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.txtNguoiGiao.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.txtNguoiGiao.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.DateTimeMaskManager));
-            this.txtNguoiGiao.Properties.MaskSettings.Set("mask", "d");
-            this.txtNguoiGiao.Size = new System.Drawing.Size(367, 38);
-            this.txtNguoiGiao.StyleController = this.layoutControl2;
-            this.txtNguoiGiao.TabIndex = 11;
             // 
             // txtNgayTao
             // 
@@ -796,6 +782,19 @@
             this.gridColumn43.Visible = true;
             this.gridColumn43.VisibleIndex = 12;
             // 
+            // txtNguoiGiao
+            // 
+            this.txtNguoiGiao.Location = new System.Drawing.Point(507, 182);
+            this.txtNguoiGiao.Name = "txtNguoiGiao";
+            this.txtNguoiGiao.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNguoiGiao.Properties.Appearance.Options.UseFont = true;
+            this.txtNguoiGiao.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.txtNguoiGiao.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.txtNguoiGiao.Properties.MaskSettings.Set("mask", "");
+            this.txtNguoiGiao.Size = new System.Drawing.Size(367, 38);
+            this.txtNguoiGiao.StyleController = this.layoutControl2;
+            this.txtNguoiGiao.TabIndex = 11;
+            // 
             // frmNhapKho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -819,7 +818,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtNCC.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtKho.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSoLuongNhap.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNguoiGiao.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNgayTao.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNgayTao.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNgayCapNhat.Properties.CalendarTimeProperties)).EndInit();
@@ -850,6 +848,7 @@
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridDataNhapKho)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewNhapKho)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNguoiGiao.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -875,7 +874,6 @@
         private DevExpress.XtraEditors.LookUpEdit txtNCC;
         private DevExpress.XtraEditors.LookUpEdit txtKho;
         private DevExpress.XtraEditors.TextEdit txtSoLuongNhap;
-        private DevExpress.XtraEditors.TextEdit txtNguoiGiao;
         private DevExpress.XtraEditors.DateEdit txtNgayTao;
         private DevExpress.XtraEditors.DateEdit txtNgayCapNhat;
         private DevExpress.XtraEditors.DateEdit txtNgayNhap;
@@ -918,5 +916,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn41;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn42;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn43;
+        private DevExpress.XtraEditors.TextEdit txtNguoiGiao;
     }
 }

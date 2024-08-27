@@ -42,7 +42,9 @@ namespace WorkHouse.userControl.formControl
         }
         private void ResetNhapKho()
         {
-            cboLoaiNhap.Text = string.Empty;
+            txtKho.Text = string.Empty;
+            txtNCC.Text = string.Empty;
+            cboLoaiNhap.SelectedItem = null;
             txtNguoiTao.Text = string.Empty;
             txtSoLuongNhap.Text = string.Empty;
             txtNoiDungNhap.Text = string.Empty;
@@ -130,6 +132,8 @@ namespace WorkHouse.userControl.formControl
 
                 // Hiển thị form chi tiết
                 frmNhapKhoChiTiet frm = new frmNhapKhoChiTiet();
+                frm.IdNhapKho = IdNhapKho;
+                frm.nhapkho = nhapKho;
                 frm.Show();
             }
             else
@@ -139,7 +143,7 @@ namespace WorkHouse.userControl.formControl
         }
         private void ExportToExcel()
         {
-            // Khởi tạo Excel
+
             Excel.Application excelApp = new Excel.Application();
             if (excelApp == null)
             {
@@ -181,6 +185,7 @@ namespace WorkHouse.userControl.formControl
                 worksheet.Cells[row, 11] = item.NguoiTao;
                 row++;
             }
+
             // Đặt đường dẫn và tên file cho Excel
             string directoryPath = @"C:\Temp";
             string filePath = Path.Combine(directoryPath, "NhapKhoData.xlsx");
@@ -201,10 +206,18 @@ namespace WorkHouse.userControl.formControl
             }
             finally
             {
-                workbook.Close(false);
-                excelApp.Quit();
-                System.Runtime.InteropServices.Marshal.ReleaseComObject(workbook);
-                System.Runtime.InteropServices.Marshal.ReleaseComObject(excelApp);
+                // Giải phóng các đối tượng COM
+                if (workbook != null)
+                {
+                    workbook.Close(false);
+                    System.Runtime.InteropServices.Marshal.ReleaseComObject(workbook);
+                }
+                if (excelApp != null)
+                {
+                    excelApp.Quit();
+                    System.Runtime.InteropServices.Marshal.ReleaseComObject(excelApp);
+                }
+
                 workbook = null;
                 excelApp = null;
                 GC.Collect();

@@ -37,7 +37,7 @@ namespace WorkHouse.Repository
                                 NhapKhoCT nhapKhoCt = new NhapKhoCT
                                 {
                                     Id = Convert.ToInt32(reader["id"]),
-                                    NhapKhoId = Convert.ToInt32(reader["nhap_kho_id"]),
+                                    NhapKhoId = reader["nhap_kho_id"].ToString(),
                                     NgayNhap = Convert.ToDateTime(reader["ngay_nhap"]),
                                     SanPhamId = Convert.ToInt32(reader["san_pham_id"]),
                                     NhomSanPham = reader["nhom_san_pham"].ToString(),
