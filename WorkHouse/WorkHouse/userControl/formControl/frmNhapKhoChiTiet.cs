@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WorkHouse.Model;
 using WorkHouse.Service;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using Excel = Microsoft.Office.Interop.Excel;
 
 namespace WorkHouse.userControl.formControl
@@ -33,58 +34,47 @@ namespace WorkHouse.userControl.formControl
       
         private void btnThemChiTiet_Click(object sender, EventArgs e)
         {
-
-            for (int i = 0; i < nhapkho.SlNhap; i++)
+            if (Check())
             {
-                NhapKhoCT nkct = new NhapKhoCT()
+                for (int i = 0; i < nhapkho.SlNhap; i++)
                 {
-                    NhapKhoId = IdNhapKho,
-                    NgayNhap = DateTime.Parse(txtNgayNhap.Text),
-                    SanPhamId = (int)(txtSanPham.EditValue),
-                    NhomSanPham = cboNhomSanPham.SelectedItem.ToString(),
-                    HangSX = txtHangSx.Text,
-                    HinhAnh = null,
-                    ThongTin = txtThongTin.Text,
-                    HanSuDung = DateTime.Parse(txtHanSuDung.Text),
-                    QuyCach = txtQuyCach.Text,
-                    Dvt = txtDvt.Text,
-                    SoLo = txtSoLo.Text,
-                    GiaNhap = int.Parse(txtGiaNhap.Text),
-                    SlNhap = int.Parse(txtSLNhap.Text), // Mỗi bản sao nhập 1 đơn vị
-                    SlXuat = int.Parse(txtSLXuat.Text),
-                    SlTon = int.Parse(txtSLTon.Text),
-                    NgayHetHan = DateTime.Parse(txtNgayHetHan.Text),
-                    GhiChu = txtGhiChu.Text,
-                    NgayTao = DateTime.Parse(txtNgayTao.Text),
-                    NgayCapNhat = DateTime.Parse(txtNgayCapNhat.Text),
-                    NguoiTao = txtNguoiTao.Text,
-                };
-                listNhapKhoCT.Add(nkct);
-                ExportToExcelNhapKhoCt();
-                var splist = _UnitService.SanPhamService.GetAllSanPham();
-                var sp = splist.FirstOrDefault(x => x.Id == nkct.SanPhamId);
-                if (sp != null)
-                {
-                    // Update the quantities
-                    sp.SlNhap += nkct.SlNhap; // Assuming you want to add the new quantities
-                    sp.SlTon = sp.SlTon + nkct.SlNhap - sp.SlXuat; // Update stock quantity
-                    listSanPham.Add(sp);
-                    ExportToExcelSanPham();
-                    // Save changes to the database
+                    NhapKhoCT nkct = new NhapKhoCT()
+                    {
+                        NhapKhoId = IdNhapKho,
+                        NgayNhap = DateTime.Parse(txtNgayNhap.Text),
+                        SanPhamId = (int)(txtSanPham.EditValue),
+                        NhomSanPham = cboNhomSanPham.SelectedItem.ToString(),
+                        HangSX = txtHangSx.Text,
+                        HinhAnh = null,
+                        ThongTin = txtThongTin.Text,
+                        HanSuDung = DateTime.Parse(txtHanSuDung.Text),
+                        QuyCach = txtQuyCach.Text,
+                        Dvt = txtDvt.Text,
+                        SoLo = txtSoLo.Text,
+                        GiaNhap = int.Parse(txtGiaNhap.Text),
+                        SlNhap = int.Parse(txtSLNhap.Text), 
+                        SlXuat = int.Parse(txtSLXuat.Text),
+                        SlTon = int.Parse(txtSLTon.Text),
+                        NgayHetHan = DateTime.Parse(txtNgayHetHan.Text),
+                        GhiChu = txtGhiChu.Text,
+                        NgayTao = DateTime.Parse(txtNgayTao.Text),
+                        NgayCapNhat = DateTime.Parse(txtNgayCapNhat.Text),
+                        NguoiTao = txtNguoiTao.Text,
+                    };
+                    listNhapKhoCT.Add(nkct);
+                    ExportToExcelNhapKhoCt();
+                    var splist = _UnitService.SanPhamService.GetAllSanPham();
+                    var sp = splist.FirstOrDefault(x => x.Id == nkct.SanPhamId);
+                    if (sp != null)
+                    {
+                        sp.SlNhap += nkct.SlNhap; 
+                        sp.SlTon = sp.SlTon + nkct.SlNhap - sp.SlXuat;
+                        listSanPham.Add(sp);
+                        ExportToExcelSanPham(); 
+                    }
+                    ClearText();
                 }
-                MessageBox.Show("Them thanh cong");
-                ClearText();
-            }
-
-            // Hiển thị thông báo thành công
-            MessageBox.Show("Dữ liệu đã được thêm thành công. Bạn có thể tiếp tục thêm dữ liệu mới.");
-        }
-
-        private bool ValidateNhapKhoCTData()
-        {
-            // Thực hiện kiểm tra tính hợp lệ của dữ liệu nhập vào (ví dụ kiểm tra các trường không rỗng, định dạng ngày tháng, số lượng, v.v.)
-            // Trả về true nếu dữ liệu hợp lệ, false nếu không hợp lệ.
-            return true;
+            };
         }
         private void ClearText()
         {
@@ -211,6 +201,183 @@ namespace WorkHouse.userControl.formControl
                 excelApp = null;
                 GC.Collect();
             }
+        }
+        private bool Check()
+        {
+            bool isValid = true;
+            if (txtSanPham.EditValue != null)
+            {
+                txtSanPham.ForeColor = Color.Green;
+            }
+            else
+            {
+                txtSanPham.ForeColor = Color.Red;
+                isValid = false;
+            }
+            if (cboNhomSanPham.SelectedIndex != -1)
+            {
+                cboNhomSanPham.ForeColor = Color.Green;
+            }
+            else
+            {
+                cboNhomSanPham.ForeColor = Color.Red;
+                isValid = false;
+            }
+            if (!string.IsNullOrEmpty(txtHangSx.Text))
+            {
+                txtHangSx.ForeColor = Color.Green;
+            }
+            else
+            {
+                txtHangSx.ForeColor = Color.Red;
+                isValid = false;
+            }
+            if (!string.IsNullOrEmpty(txtThongTin.Text))
+            {
+                txtThongTin.ForeColor = Color.Green;
+            }
+            else
+            {
+                txtThongTin.ForeColor = Color.Red;
+                isValid = false;
+            }
+            if (!string.IsNullOrEmpty(txtQuyCach.Text))
+            {
+                txtQuyCach.ForeColor = Color.Green;
+            }
+            else
+            {
+                txtQuyCach.ForeColor = Color.Red;
+                isValid = false;
+            }
+            if (!string.IsNullOrEmpty(txtDvt.Text))
+            {
+                txtDvt.ForeColor = Color.Green;
+            }
+            else
+            {
+                txtDvt.ForeColor = Color.Red;
+                isValid = false;
+            }
+
+            if (!string.IsNullOrEmpty(txtSoLo.Text))
+            {
+                txtSoLo.ForeColor = Color.Green;
+            }
+            else
+            {
+                txtSoLo.ForeColor = Color.Red;
+                isValid = false;
+            }
+            if (!string.IsNullOrEmpty(txtNguoiTao.Text))
+            {
+                txtNguoiTao.ForeColor = Color.Green;
+            }
+            else
+            {
+                txtNguoiTao.ForeColor = Color.Red;
+                isValid = false;
+            }
+            float giaNhap;
+            if (!string.IsNullOrEmpty(txtGiaNhap.Text) && float.TryParse(txtGiaNhap.Text, out giaNhap))
+            {
+                txtGiaNhap.ForeColor = Color.Green;
+            }
+            else
+            {
+                txtGiaNhap.ForeColor = Color.Red;
+                isValid = false;
+            }
+            if (!string.IsNullOrEmpty(txtGhiChu.Text))
+            {
+                txtGhiChu.ForeColor = Color.Green;
+            }
+            else
+            {
+                txtGhiChu.ForeColor = Color.Red;
+                isValid = false;
+            }
+            if (!string.IsNullOrEmpty(txtSLNhap.Text))
+            {
+                txtSLNhap.ForeColor = Color.Green;
+            }
+            else
+            {
+                txtSLNhap.ForeColor = Color.Red;
+                isValid = false;
+            }
+            if (!string.IsNullOrEmpty(txtSLXuat.Text))
+            {
+                txtSLXuat.ForeColor = Color.Green;
+            }
+            else
+            {
+                txtSLXuat.ForeColor = Color.Red;
+                isValid = false;
+            }
+            if (!string.IsNullOrEmpty(txtSLTon.Text))
+            {
+                txtSLTon.ForeColor = Color.Green;
+            }
+            else
+            {
+                txtSLTon.ForeColor = Color.Red;
+                isValid = false;
+            }
+          
+
+            DateTime date;
+
+            if (!string.IsNullOrEmpty(txtNgayCapNhat.Text) && DateTime.TryParse(txtNgayCapNhat.Text, out date))
+            {
+                txtNgayCapNhat.ForeColor = Color.Green;
+            }
+            else
+            {
+                txtNgayCapNhat.ForeColor = Color.Red;
+                isValid = false;
+            }
+
+            if (!string.IsNullOrEmpty(txtNgayNhap.Text) && DateTime.TryParse(txtNgayNhap.Text, out date))
+            {
+                txtNgayNhap.ForeColor = Color.Green;
+            }
+            else
+            {
+                txtNgayNhap.ForeColor = Color.Red;
+                isValid = false;
+            }
+
+            if (!string.IsNullOrEmpty(txtNgayHetHan.Text) && DateTime.TryParse(txtNgayHetHan.Text, out date))
+            {
+                txtNgayHetHan.ForeColor = Color.Green;
+            }
+            else
+            {
+                txtNgayHetHan.ForeColor = Color.Red;
+                isValid = false;
+            }
+
+            if (!string.IsNullOrEmpty(txtHanSuDung.Text) && DateTime.TryParse(txtHanSuDung.Text, out date))
+            {
+                txtHanSuDung.ForeColor = Color.Green;
+            }
+            else
+            {
+                txtHanSuDung.ForeColor = Color.Red;
+                isValid = false;
+            }
+
+            if (!string.IsNullOrEmpty(txtNgayTao.Text) && DateTime.TryParse(txtNgayTao.Text, out date))
+            {
+                txtNgayTao.ForeColor = Color.Green;
+            }
+            else
+            {
+                txtNgayTao.ForeColor = Color.Red;
+                isValid = false;
+            }
+            return isValid;
         }
 
         public void ExportToExcelSanPham()
@@ -343,6 +510,7 @@ namespace WorkHouse.userControl.formControl
                     _isUpdating = false;
                 }
             }
+            Check();
         }
 
         private void txtSLNhap_Properties_EditValueChanged(object sender, EventArgs e)
@@ -368,11 +536,7 @@ namespace WorkHouse.userControl.formControl
                     }
                 }
             }
-            else
-            {
-                // Xử lý lỗi nếu không thể chuyển đổi SLNhap sang số nguyên
-                MessageBox.Show("SLNhap không hợp lệ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            Check();
         }
 
         private void frmNhapKhoChiTiet_Load(object sender, EventArgs e)
@@ -382,6 +546,91 @@ namespace WorkHouse.userControl.formControl
             txtSanPham.Properties.DisplayMember = "TenSanPham";  // Thuộc tính để hiển thị
             txtSanPham.Properties.ValueMember = "Id";
 
+        }
+
+        private void txtThongTin_Properties_EditValueChanged(object sender, EventArgs e)
+        {
+            Check();
+        }
+
+        private void txtNgayNhap_Properties_EditValueChanged(object sender, EventArgs e)
+        {
+            Check();
+        }
+
+        private void cboNhomSanPham_Properties_EditValueChanged(object sender, EventArgs e)
+        {
+            Check();
+        }
+
+        private void txtHangSx_Properties_EditValueChanged(object sender, EventArgs e)
+        {
+            Check();
+        }
+
+        private void txtHanSuDung_Properties_EditValueChanged(object sender, EventArgs e)
+        {
+            Check();
+        }
+
+        private void txtQuyCach_Properties_EditValueChanged(object sender, EventArgs e)
+        {
+            Check();
+        }
+
+        private void txtDvt_Properties_EditValueChanged(object sender, EventArgs e)
+        {
+            Check();
+        }
+
+        private void txtSoLo_Properties_EditValueChanged(object sender, EventArgs e)
+        {
+            Check();
+        }
+
+        private void txtNguoiTao_EditValueChanged(object sender, EventArgs e)
+        {
+            Check();
+        }
+
+        private void txtGiaNhap_EditValueChanged(object sender, EventArgs e)
+        {
+            Check();
+        }
+
+        private void txtSLXuat_EditValueChanged(object sender, EventArgs e)
+        {
+            Check();
+        }
+
+        private void txtNgayHetHan_EditValueChanged(object sender, EventArgs e)
+        {
+            Check();
+        }
+
+        private void txtGhiChu_EditValueChanged(object sender, EventArgs e)
+        {
+            Check();
+        }
+
+        private void txtNgayTao_EditValueChanged(object sender, EventArgs e)
+        {
+            Check();
+        }
+
+        private void txtNgayCapNhat_EditValueChanged(object sender, EventArgs e)
+        {
+            Check();
+        }
+
+        private void txtSLTon_EditValueChanged(object sender, EventArgs e)
+        {
+            Check();
+        }
+
+        private void cboNhomSanPham_EditValueChanged(object sender, EventArgs e)
+        {
+            Check();
         }
     }
     

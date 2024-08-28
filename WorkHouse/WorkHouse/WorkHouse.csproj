@@ -101,6 +101,7 @@
     <Compile Include="userControl\userXuatKho.Designer.cs">
       <DependentUpon>userXuatKho.cs</DependentUpon>
     </Compile>
+    <Compile Include="WorkHouse\SoaLib.cs" />
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>

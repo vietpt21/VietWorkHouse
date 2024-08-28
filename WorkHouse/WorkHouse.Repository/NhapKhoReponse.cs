@@ -52,7 +52,7 @@ namespace WorkHouse.Repository
                                     NguoiGiao = reader["nguoi_giao"].ToString(),
                                     NoiDungNhap = reader["noi_dung_nhap"].ToString(),
                                     NgayTao = Convert.ToDateTime(reader["ngay_tao"]),
-                                    NgayCapNhat = Convert.ToDateTime(reader["ngay_cap_nhap"]),
+                                    NgayCapNhat = Convert.ToDateTime(reader["ngay_cap_nhat"]),
                                     NguoiTao = reader["nguoi_tao"].ToString(),
                                     ncc = new NCC
                                     {

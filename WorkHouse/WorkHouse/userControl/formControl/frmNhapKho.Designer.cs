@@ -50,6 +50,7 @@
             this.txtNgayTao = new DevExpress.XtraEditors.DateEdit();
             this.txtNgayCapNhat = new DevExpress.XtraEditors.DateEdit();
             this.txtNgayNhap = new DevExpress.XtraEditors.DateEdit();
+            this.txtNguoiGiao = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -70,7 +71,7 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblIdNhap = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.imageEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -89,7 +90,6 @@
             this.gridColumn41 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn42 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn43 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.txtNguoiGiao = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.mainRibbonControl)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
@@ -106,6 +106,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtNgayCapNhat.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNgayNhap.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNgayNhap.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNguoiGiao.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
@@ -130,7 +131,6 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridDataNhapKho)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewNhapKho)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNguoiGiao.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // mainRibbonPage
@@ -394,6 +394,19 @@
             this.txtNgayNhap.StyleController = this.layoutControl2;
             this.txtNgayNhap.TabIndex = 17;
             // 
+            // txtNguoiGiao
+            // 
+            this.txtNguoiGiao.Location = new System.Drawing.Point(507, 182);
+            this.txtNguoiGiao.Name = "txtNguoiGiao";
+            this.txtNguoiGiao.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNguoiGiao.Properties.Appearance.Options.UseFont = true;
+            this.txtNguoiGiao.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.txtNguoiGiao.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.txtNguoiGiao.Properties.MaskSettings.Set("mask", "");
+            this.txtNguoiGiao.Size = new System.Drawing.Size(367, 38);
+            this.txtNguoiGiao.StyleController = this.layoutControl2;
+            this.txtNguoiGiao.TabIndex = 11;
+            // 
             // layoutControlGroup1
             // 
             this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -464,6 +477,7 @@
             this.emptySpaceItem4.Location = new System.Drawing.Point(0, 225);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
             this.emptySpaceItem4.Size = new System.Drawing.Size(736, 40);
+            this.emptySpaceItem4.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem1
@@ -600,23 +614,23 @@
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.label1);
+            this.panel6.Controls.Add(this.lblIdNhap);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(224, 43);
             this.panel6.TabIndex = 0;
             // 
-            // label1
+            // lblIdNhap
             // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(224, 43);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblIdNhap.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblIdNhap.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdNhap.Location = new System.Drawing.Point(0, 0);
+            this.lblIdNhap.Name = "lblIdNhap";
+            this.lblIdNhap.Size = new System.Drawing.Size(224, 43);
+            this.lblIdNhap.TabIndex = 0;
+            this.lblIdNhap.Text = "label1";
+            this.lblIdNhap.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel5
             // 
@@ -645,7 +659,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 443);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1110, 162);
+            this.panel3.Size = new System.Drawing.Size(1110, 217);
             this.panel3.TabIndex = 4;
             // 
             // gridDataNhapKho
@@ -654,7 +668,7 @@
             this.gridDataNhapKho.Location = new System.Drawing.Point(0, 0);
             this.gridDataNhapKho.MainView = this.gridViewNhapKho;
             this.gridDataNhapKho.Name = "gridDataNhapKho";
-            this.gridDataNhapKho.Size = new System.Drawing.Size(1110, 162);
+            this.gridDataNhapKho.Size = new System.Drawing.Size(1110, 217);
             this.gridDataNhapKho.TabIndex = 3;
             this.gridDataNhapKho.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewNhapKho});
@@ -782,31 +796,20 @@
             this.gridColumn43.Visible = true;
             this.gridColumn43.VisibleIndex = 12;
             // 
-            // txtNguoiGiao
-            // 
-            this.txtNguoiGiao.Location = new System.Drawing.Point(507, 182);
-            this.txtNguoiGiao.Name = "txtNguoiGiao";
-            this.txtNguoiGiao.Properties.Appearance.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNguoiGiao.Properties.Appearance.Options.UseFont = true;
-            this.txtNguoiGiao.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.txtNguoiGiao.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.txtNguoiGiao.Properties.MaskSettings.Set("mask", "");
-            this.txtNguoiGiao.Size = new System.Drawing.Size(367, 38);
-            this.txtNguoiGiao.StyleController = this.layoutControl2;
-            this.txtNguoiGiao.TabIndex = 11;
-            // 
             // frmNhapKho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ClientSize = new System.Drawing.Size(1110, 605);
+            this.ClientSize = new System.Drawing.Size(1110, 660);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.mainRibbonControl);
             this.Name = "frmNhapKho";
             this.Ribbon = this.mainRibbonControl;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nhập kho";
+           
             this.Load += new System.EventHandler(this.frmNhapKho_Load);
             ((System.ComponentModel.ISupportInitialize)(this.mainRibbonControl)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -824,6 +827,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtNgayCapNhat.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNgayNhap.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNgayNhap.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNguoiGiao.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
@@ -848,7 +852,6 @@
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridDataNhapKho)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewNhapKho)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNguoiGiao.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -897,7 +900,7 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblIdNhap;
         private System.Windows.Forms.Panel panel5;
         private DevExpress.XtraEditors.PictureEdit imageEdit1;
         private System.Windows.Forms.Panel panel3;

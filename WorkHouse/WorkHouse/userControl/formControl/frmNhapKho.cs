@@ -9,11 +9,13 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WorkHouse.Model;
 using WorkHouse.Service;
+using WorkHouse.WorkHouse;
 using Excel = Microsoft.Office.Interop.Excel;
 
 namespace WorkHouse.userControl.formControl
@@ -22,8 +24,10 @@ namespace WorkHouse.userControl.formControl
     {
         static readonly string connectionString = "Data Source=localhost;Initial Catalog=QLKho;Integrated Security=True;Encrypt=True;TrustServerCertificate=True;";
         static UnitService _dbUnit;
+        string NewID = String.Empty;
         private userNhapKho _userNhapKho;
-        public string IdNhapKho { get; set; }
+        SoaLib soaLib = new SoaLib(connectionString);
+      
         List<NhapKho> listNhapKho = new List<NhapKho>();
         public frmNhapKho()
         {
@@ -31,6 +35,7 @@ namespace WorkHouse.userControl.formControl
             _dbUnit = new UnitService(connectionString);
 
         }
+
 
      
         public userNhapKho UserNhapKho
@@ -42,7 +47,7 @@ namespace WorkHouse.userControl.formControl
         }
         private void ResetNhapKho()
         {
-            txtKho.Text = string.Empty;
+           /* txtKho.Text = string.Empty;
             txtNCC.Text = string.Empty;
             cboLoaiNhap.SelectedItem = null;
             txtNguoiTao.Text = string.Empty;
@@ -51,27 +56,22 @@ namespace WorkHouse.userControl.formControl
             txtNguoiGiao.Text = string.Empty;
             txtNgayNhap.Text = string.Empty;
             txtNgayTao.Text = string.Empty;
-            txtNgayCapNhat.Text = string.Empty;
+            txtNgayCapNhat.Text = string.Empty;*/
         }
         private void frmNhapKho_Load(object sender, EventArgs e)
         {
+            NewID  = soaLib.GenerateId();
+            lblIdNhap.Text = NewID;
             var KhoList = _dbUnit.KhoService.GetAllKho();
             var nccList = _dbUnit.NCCService.GetAllNCC();
-
-            // Cấu hình LookUpEdit
             txtKho.Properties.DataSource = KhoList;
-            txtKho.Properties.DisplayMember = "TenKho";  // Thuộc tính để hiển thị
-            txtKho.Properties.ValueMember = "Id";     // Thuộc tính để làm giá trị TenNcc
-
+            txtKho.Properties.ValueMember = "Id";  
             txtNCC.Properties.DataSource = nccList;
-            txtNCC.Properties.DisplayMember = "TenNcc";  // Thuộc tính để hiển thị
             txtNCC.Properties.ValueMember = "Id";
-
-            gridDataNhapKho.DataSource = _dbUnit.NhapKhoService.GetAllNhapKho();
         }
         private bool ValidateNhapKhoData()
         {
-            // Kiểm tra các trường dữ liệu cần thiết
+            
             if (string.IsNullOrEmpty(cboLoaiNhap.Text) ||
                 string.IsNullOrEmpty(txtNguoiTao.Text) ||
                 string.IsNullOrEmpty(txtSoLuongNhap.Text) ||
@@ -84,7 +84,7 @@ namespace WorkHouse.userControl.formControl
                 return false;
             }
 
-            // Kiểm tra định dạng ngày tháng và số lượng
+          
             if (!DateTime.TryParse(txtNgayNhap.Text, out _) ||
                 !DateTime.TryParse(txtNgayTao.Text, out _) ||
                 !DateTime.TryParse(txtNgayCapNhat.Text, out _) ||
@@ -103,12 +103,13 @@ namespace WorkHouse.userControl.formControl
         }
         private void btnThemChiTiet_Click(object sender, EventArgs e)
         {
-            // Kiểm tra tính hợp lệ của dữ liệu nhập
+
+
             if (ValidateNhapKhoData())
             {
                 NhapKho nhapKho = new NhapKho
                 {
-                    Id = IdNhapKho,
+                    Id = lblIdNhap.Text,
                     LoaiNhap = cboLoaiNhap.SelectedItem.ToString(),
                     NgayNhap = DateTime.Now,
                     NccId = (int)txtNCC.EditValue,
@@ -118,21 +119,16 @@ namespace WorkHouse.userControl.formControl
                     NoiDungNhap = txtNoiDungNhap.Text,
                     NgayTao = DateTime.Parse(txtNgayTao.Text),
                     NgayCapNhat = DateTime.Parse(txtNgayCapNhat.Text),
-                    NguoiTao = txtNguoiTao.Text, // Thay đổi theo người dùng hiện tại
+                    NguoiTao = txtNguoiTao.Text,
                 };
-
-                // Thay vì lưu vào cơ sở dữ liệu, chỉ thêm vào danh sách
                 listNhapKho.Add(nhapKho);
-
-                // Xuất dữ liệu ra Excel
-                ExportToExcel();
-
-                // Đặt lại các trường dữ liệu
-                ResetNhapKho();
-
-                // Hiển thị form chi tiết
+                this.Enabled = false;
                 frmNhapKhoChiTiet frm = new frmNhapKhoChiTiet();
-                frm.IdNhapKho = IdNhapKho;
+                frm.FormClosing += new FormClosingEventHandler(frmNhapKhoChiTiet_FormClosing);
+                frm.FormClosed += new FormClosedEventHandler(frmNhapKhoChiTiet_FormClosed);
+                /* frm.TopMost = true;*/
+                frm.Show();
+                frm.IdNhapKho = nhapKho.Id;
                 frm.nhapkho = nhapKho;
                 frm.Show();
             }
@@ -222,6 +218,16 @@ namespace WorkHouse.userControl.formControl
                 excelApp = null;
                 GC.Collect();
             }
+        }
+
+        private void frmNhapKhoChiTiet_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Enabled = true;
+
+        }
+        private void frmNhapKhoChiTiet_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Enabled = true;
         }
     }
 }
