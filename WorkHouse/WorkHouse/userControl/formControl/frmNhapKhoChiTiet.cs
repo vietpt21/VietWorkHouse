@@ -31,17 +31,16 @@ namespace WorkHouse.userControl.formControl
             txtSanPham.Properties.EditValueChanged += txtSanPham_Properties_EditValueChanged;
             txtSLNhap.Properties.EditValueChanged += txtSLNhap_Properties_EditValueChanged;
         }
-      
-        private void btnThemChiTiet_Click(object sender, EventArgs e)
+        private void frmNhapKhoChiTiet_Validated(object sender, EventArgs e)
         {
-            if (Check())
+            for (int i = 0; i < nhapkho.SlNhap; i++)
             {
-                for (int i = 0; i < nhapkho.SlNhap; i++)
+                if (Check())
                 {
                     NhapKhoCT nkct = new NhapKhoCT()
                     {
                         NhapKhoId = IdNhapKho,
-                        NgayNhap = DateTime.Parse(txtNgayNhap.Text),
+                        NgayNhap = DateTime.Now,
                         SanPhamId = (int)(txtSanPham.EditValue),
                         NhomSanPham = cboNhomSanPham.SelectedItem.ToString(),
                         HangSX = txtHangSx.Text,
@@ -52,25 +51,69 @@ namespace WorkHouse.userControl.formControl
                         Dvt = txtDvt.Text,
                         SoLo = txtSoLo.Text,
                         GiaNhap = int.Parse(txtGiaNhap.Text),
-                        SlNhap = int.Parse(txtSLNhap.Text), 
+                        SlNhap = int.Parse(txtSLNhap.Text),
                         SlXuat = int.Parse(txtSLXuat.Text),
                         SlTon = int.Parse(txtSLTon.Text),
                         NgayHetHan = DateTime.Parse(txtNgayHetHan.Text),
                         GhiChu = txtGhiChu.Text,
-                        NgayTao = DateTime.Parse(txtNgayTao.Text),
-                        NgayCapNhat = DateTime.Parse(txtNgayCapNhat.Text),
+                        NgayTao = DateTime.Now,
+                        NgayCapNhat = DateTime.Now,
                         NguoiTao = txtNguoiTao.Text,
                     };
                     listNhapKhoCT.Add(nkct);
                     ExportToExcelNhapKhoCt();
                     var splist = _UnitService.SanPhamService.GetAllSanPham();
-                    var sp = splist.FirstOrDefault(x => x.Id == nkct.SanPhamId);
+                    var sp = splist.FirstOrDefault(x => x.Id == nkct.SanPhamId && x.NhomSanPham ==nkct.NhomSanPham);
                     if (sp != null)
                     {
-                        sp.SlNhap += nkct.SlNhap; 
+                        sp.SlNhap += nkct.SlNhap;
                         sp.SlTon = sp.SlTon + nkct.SlNhap - sp.SlXuat;
                         listSanPham.Add(sp);
-                        ExportToExcelSanPham(); 
+                        ExportToExcelSanPham();
+                    }
+                    ClearText();
+                }
+            };
+        }
+        private void btnThemChiTiet_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < nhapkho.SlNhap; i++)
+            {
+                if (Check())
+                {
+                    NhapKhoCT nkct = new NhapKhoCT()
+                    {
+                        NhapKhoId = IdNhapKho,
+                        NgayNhap = DateTime.Now,
+                        SanPhamId = (int)(txtSanPham.EditValue),
+                        NhomSanPham = cboNhomSanPham.SelectedItem.ToString(),
+                        HangSX = txtHangSx.Text,
+                        HinhAnh = null,
+                        ThongTin = txtThongTin.Text,
+                        HanSuDung = DateTime.Parse(txtHanSuDung.Text),
+                        QuyCach = txtQuyCach.Text,
+                        Dvt = txtDvt.Text,
+                        SoLo = txtSoLo.Text,
+                        GiaNhap = int.Parse(txtGiaNhap.Text),
+                        SlNhap = int.Parse(txtSLNhap.Text),
+                        SlXuat = int.Parse(txtSLXuat.Text),
+                        SlTon = int.Parse(txtSLTon.Text),
+                        NgayHetHan = DateTime.Parse(txtNgayHetHan.Text),
+                        GhiChu = txtGhiChu.Text,
+                        NgayTao = DateTime.Now,
+                        NgayCapNhat = DateTime.Now,
+                        NguoiTao = txtNguoiTao.Text,
+                    };
+                    listNhapKhoCT.Add(nkct);
+                    ExportToExcelNhapKhoCt();
+                    var splist = _UnitService.SanPhamService.GetAllSanPham();
+                    var sp = splist.FirstOrDefault(x => x.Id == nkct.SanPhamId && x.NhomSanPham == nkct.NhomSanPham);
+                    if (sp != null)
+                    {
+                        sp.SlNhap += nkct.SlNhap;
+                        sp.SlTon = sp.SlTon + nkct.SlNhap - sp.SlXuat;
+                        listSanPham.Add(sp);
+                        ExportToExcelSanPham();
                     }
                     ClearText();
                 }
@@ -79,7 +122,7 @@ namespace WorkHouse.userControl.formControl
         private void ClearText()
         {
          
-            txtNgayNhap.Text = null;
+        
             txtSanPham.EditValue = null;
             cboNhomSanPham.SelectedItem = -1;
             txtHangSx.Text = null;
@@ -94,8 +137,7 @@ namespace WorkHouse.userControl.formControl
             txtSLTon.Text = string.Empty;
             txtNgayHetHan.Text = null;
             txtGhiChu.Text = string.Empty;
-            txtNgayTao.Text = string.Empty;
-            txtNgayCapNhat.Text = null;
+         
             txtNguoiTao.Text = string.Empty;
         }
         private void ExportToExcelNhapKhoCt()
@@ -328,26 +370,7 @@ namespace WorkHouse.userControl.formControl
 
             DateTime date;
 
-            if (!string.IsNullOrEmpty(txtNgayCapNhat.Text) && DateTime.TryParse(txtNgayCapNhat.Text, out date))
-            {
-                txtNgayCapNhat.ForeColor = Color.Green;
-            }
-            else
-            {
-                txtNgayCapNhat.ForeColor = Color.Red;
-                isValid = false;
-            }
-
-            if (!string.IsNullOrEmpty(txtNgayNhap.Text) && DateTime.TryParse(txtNgayNhap.Text, out date))
-            {
-                txtNgayNhap.ForeColor = Color.Green;
-            }
-            else
-            {
-                txtNgayNhap.ForeColor = Color.Red;
-                isValid = false;
-            }
-
+           
             if (!string.IsNullOrEmpty(txtNgayHetHan.Text) && DateTime.TryParse(txtNgayHetHan.Text, out date))
             {
                 txtNgayHetHan.ForeColor = Color.Green;
@@ -368,15 +391,7 @@ namespace WorkHouse.userControl.formControl
                 isValid = false;
             }
 
-            if (!string.IsNullOrEmpty(txtNgayTao.Text) && DateTime.TryParse(txtNgayTao.Text, out date))
-            {
-                txtNgayTao.ForeColor = Color.Green;
-            }
-            else
-            {
-                txtNgayTao.ForeColor = Color.Red;
-                isValid = false;
-            }
+         
             return isValid;
         }
 
@@ -547,17 +562,10 @@ namespace WorkHouse.userControl.formControl
             txtSanPham.Properties.ValueMember = "Id";
 
         }
-
         private void txtThongTin_Properties_EditValueChanged(object sender, EventArgs e)
         {
             Check();
         }
-
-        private void txtNgayNhap_Properties_EditValueChanged(object sender, EventArgs e)
-        {
-            Check();
-        }
-
         private void cboNhomSanPham_Properties_EditValueChanged(object sender, EventArgs e)
         {
             Check();
@@ -613,16 +621,6 @@ namespace WorkHouse.userControl.formControl
             Check();
         }
 
-        private void txtNgayTao_EditValueChanged(object sender, EventArgs e)
-        {
-            Check();
-        }
-
-        private void txtNgayCapNhat_EditValueChanged(object sender, EventArgs e)
-        {
-            Check();
-        }
-
         private void txtSLTon_EditValueChanged(object sender, EventArgs e)
         {
             Check();
@@ -631,6 +629,16 @@ namespace WorkHouse.userControl.formControl
         private void cboNhomSanPham_EditValueChanged(object sender, EventArgs e)
         {
             Check();
+        }
+
+        private void frmNhapKhoChiTiet_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Enabled = true;
+        }
+
+        private void frmNhapKhoChiTiet_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Enabled = true;
         }
     }
     

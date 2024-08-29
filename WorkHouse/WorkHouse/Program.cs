@@ -14,7 +14,7 @@ namespace WorkHouse
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmNhapKhoChiTiet());
+            Application.Run(new frmNhapKho());
         }
     }
 }

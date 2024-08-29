@@ -27,7 +27,7 @@ namespace WorkHouse.userControl.formControl
         string NewID = String.Empty;
         private userNhapKho _userNhapKho;
         SoaLib soaLib = new SoaLib(connectionString);
-      
+
         List<NhapKho> listNhapKho = new List<NhapKho>();
         public frmNhapKho()
         {
@@ -37,7 +37,7 @@ namespace WorkHouse.userControl.formControl
         }
 
 
-     
+
         public userNhapKho UserNhapKho
         {
             set
@@ -47,65 +47,35 @@ namespace WorkHouse.userControl.formControl
         }
         private void ResetNhapKho()
         {
-           /* txtKho.Text = string.Empty;
-            txtNCC.Text = string.Empty;
-            cboLoaiNhap.SelectedItem = null;
-            txtNguoiTao.Text = string.Empty;
-            txtSoLuongNhap.Text = string.Empty;
-            txtNoiDungNhap.Text = string.Empty;
-            txtNguoiGiao.Text = string.Empty;
-            txtNgayNhap.Text = string.Empty;
-            txtNgayTao.Text = string.Empty;
-            txtNgayCapNhat.Text = string.Empty;*/
+            /* txtKho.Text = string.Empty;
+             txtNCC.Text = string.Empty;
+             cboLoaiNhap.SelectedItem = null;
+             txtNguoiTao.Text = string.Empty;
+             txtSoLuongNhap.Text = string.Empty;
+             txtNoiDungNhap.Text = string.Empty;
+             txtNguoiGiao.Text = string.Empty;
+             txtNgayNhap.Text = string.Empty;
+             txtNgayTao.Text = string.Empty;
+             txtNgayCapNhat.Text = string.Empty;*/
         }
         private void frmNhapKho_Load(object sender, EventArgs e)
         {
-            NewID  = soaLib.GenerateId();
+            NewID = soaLib.GenerateId();
             lblIdNhap.Text = NewID;
             var KhoList = _dbUnit.KhoService.GetAllKho();
             var nccList = _dbUnit.NCCService.GetAllNCC();
             txtKho.Properties.DataSource = KhoList;
-            txtKho.Properties.ValueMember = "Id";  
+            txtKho.Properties.ValueMember = "Id";
+            txtKho.Properties.DisplayMember = "TenKho";
             txtNCC.Properties.DataSource = nccList;
             txtNCC.Properties.ValueMember = "Id";
+            txtNCC.Properties.DisplayMember = "TenNcc";
+            Check();
         }
-        private bool ValidateNhapKhoData()
-        {
-            
-            if (string.IsNullOrEmpty(cboLoaiNhap.Text) ||
-                string.IsNullOrEmpty(txtNguoiTao.Text) ||
-                string.IsNullOrEmpty(txtSoLuongNhap.Text) ||
-                string.IsNullOrEmpty(txtNoiDungNhap.Text) ||
-                string.IsNullOrEmpty(txtNguoiGiao.Text) ||
-                string.IsNullOrEmpty(txtNgayNhap.Text) ||
-                string.IsNullOrEmpty(txtNgayTao.Text) ||
-                string.IsNullOrEmpty(txtNgayCapNhat.Text))
-            {
-                return false;
-            }
-
-          
-            if (!DateTime.TryParse(txtNgayNhap.Text, out _) ||
-                !DateTime.TryParse(txtNgayTao.Text, out _) ||
-                !DateTime.TryParse(txtNgayCapNhat.Text, out _) ||
-                !int.TryParse(txtSoLuongNhap.Text, out _))
-            {
-                return false;
-            }
-
-            // Kiểm tra NCC và Kho đã được chọn
-            if (txtNCC.EditValue == null || txtKho.EditValue == null)
-            {
-                return false;
-            }
-
-            return true;
-        }
+       
         private void btnThemChiTiet_Click(object sender, EventArgs e)
         {
-
-
-            if (ValidateNhapKhoData())
+            if (Check())
             {
                 NhapKho nhapKho = new NhapKho
                 {
@@ -117,8 +87,8 @@ namespace WorkHouse.userControl.formControl
                     SlNhap = int.Parse(txtSoLuongNhap.Text),
                     NguoiGiao = txtNguoiGiao.Text,
                     NoiDungNhap = txtNoiDungNhap.Text,
-                    NgayTao = DateTime.Parse(txtNgayTao.Text),
-                    NgayCapNhat = DateTime.Parse(txtNgayCapNhat.Text),
+                    NgayTao = DateTime.Now,
+                    NgayCapNhat = DateTime.Now,
                     NguoiTao = txtNguoiTao.Text,
                 };
                 listNhapKho.Add(nhapKho);
@@ -228,6 +198,111 @@ namespace WorkHouse.userControl.formControl
         private void frmNhapKhoChiTiet_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.Enabled = true;
+        }
+        private bool Check()
+        {
+            bool isValid = true;
+            if (txtKho.EditValue != null)
+            {
+                txtKho.ForeColor = Color.Green;
+            }
+            else
+            {
+                txtKho.ForeColor = Color.Red;
+                isValid = false;
+            }
+            if (txtNCC.EditValue != null)
+            {
+                txtNCC.ForeColor = Color.Green;
+            }
+            else
+            {
+                txtNCC.ForeColor = Color.Red;
+                isValid = false;
+            }
+            if (cboLoaiNhap.SelectedIndex != -1)
+            {
+                cboLoaiNhap.ForeColor = Color.Green;
+            }
+            else
+            {
+                cboLoaiNhap.ForeColor = Color.Red;
+                isValid = false;
+            }
+
+            float number;
+            if (!string.IsNullOrEmpty(txtSoLuongNhap.Text) && float.TryParse(txtSoLuongNhap.Text, out number))
+            {
+                txtSoLuongNhap.ForeColor = Color.Green;
+            }
+            else
+            {
+                txtSoLuongNhap.ForeColor = Color.Red;
+                isValid = false;
+            }
+            if (!string.IsNullOrEmpty(txtNoiDungNhap.Text))
+            {
+                txtNoiDungNhap.ForeColor = Color.Green;
+            }
+            else
+            {
+                txtNoiDungNhap.ForeColor = Color.Red;
+                isValid = false;
+            }
+            if (!string.IsNullOrEmpty(txtNguoiTao.Text))
+            {
+                txtNguoiTao.ForeColor = Color.Green;
+            }
+            else
+            {
+                txtNguoiTao.ForeColor = Color.Red;
+                isValid = false;
+            }
+            if (!string.IsNullOrEmpty(txtNguoiGiao.Text))
+            {
+                txtNguoiGiao.ForeColor = Color.Green;
+            }
+            else
+            {
+                txtNguoiGiao.ForeColor = Color.Red;
+                isValid = false;
+            }
+            return isValid;
+        }
+
+        private void cboLoaiNhap_EditValueChanged(object sender, EventArgs e)
+        {
+            Check();
+        }
+
+        private void txtNCC_EditValueChanged(object sender, EventArgs e)
+        {
+            Check();
+        }
+
+        private void txtKho_EditValueChanged(object sender, EventArgs e)
+        {
+            Check();
+        }
+
+        private void txtSoLuongNhap_EditValueChanged(object sender, EventArgs e)
+        {
+            Check();
+        }
+
+        private void txtNoiDungNhap_EditValueChanged(object sender, EventArgs e)
+        {
+            Check();
+        }
+
+        private void txtNguoiGiao_EditValueChanged(object sender, EventArgs e)
+        {
+            Check();
+        }
+
+        private void txtNguoiTao_EditValueChanged(object sender, EventArgs e)
+        {
+            Check();
         }
     }
 }
